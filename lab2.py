@@ -9,6 +9,8 @@ name = input("What is your name?\n")
 
 print("Hello " + name + ", thank you so much for coming today!!\n\n")
 
+price = 8
+
 menu = "Black coffee, Espresso, Latte, Cappuccino"
 
 #Metodo 1
@@ -16,6 +18,10 @@ menu = "Black coffee, Espresso, Latte, Cappuccino"
 #order = input()
 
 #Metodo 2
-order = input(name + ", what would you like from our menu today? Here is what we are serving.\n" + menu + "\n")
+order = input(name + ", what would you like from our menu today? Here is what we are serving.\n" + menu + "\nPrice: $" + str(price) +"\n")
 
-print("Sounds good " + name + ", we'll have that " + order + " ready for you in a moment.")
+quantity = input("How many do you want?\n")
+
+total = price * int(quantity)
+
+print("Sounds good " + name + ", we'll have your " + quantity + " " + order + " ready for you in a moment.\nThe final price is $" + str(total))
