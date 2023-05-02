@@ -13,18 +13,30 @@ if name == "Ben":
 else:
     print("Hello " + name + ", thank you so much for coming today!!\n\n")
 
-price = 8
-menu = "Black coffee, Espresso, Latte, Cappuccino"
+menu = "Black coffee, Espresso, Latte, Cappuccino, Frapuccino"
 
 #Metodo 1
 #print(name + ", what would you like from our menu today? Here is what we are serving.\n" + menu)
 #order = input()
 
 #Metodo 2
-order = input(name + ", what would you like from our menu today? Here is what we are serving.\n" + menu + "\nPrice: $" + str(price) +"\n")
+order = input(name + ", what would you like from our menu today? Here is what we are serving.\n" + menu + "\n")
 
 quantity = input("How many do you want?\n")
 
-total = price * int(quantity)
+price = 0
 
-print("Sounds good " + name + ", we'll have your " + quantity + " " + order + " ready for you in a moment.\nThe final price is $" + str(total))
+if order == "Frapuccino":
+    price = 5
+elif order == "Black coffee":
+    price = 2
+elif order == "Espresso":
+    price = 1
+elif order == "Latte" or order == "Capuccino":
+    price = 3
+
+if price == 0:
+    print("The product you selected does not exist.")
+else:
+    total = price * int(quantity)
+    print("Sounds good " + name + ", we'll have your " + quantity + " " + order + " ready for you in a moment.\nThe final price is $" + str(total))
