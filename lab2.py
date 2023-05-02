@@ -7,10 +7,13 @@ print("Hello, welcome to Maio39 Coffee!!")
 
 name = input("What is your name?\n")
 
-print("Hello " + name + ", thank you so much for coming today!!\n\n")
+if name == "Ben":
+    print("You're not welcome here Evil Ben!! Get Out!!")
+    exit()
+else:
+    print("Hello " + name + ", thank you so much for coming today!!\n\n")
 
 price = 8
-
 menu = "Black coffee, Espresso, Latte, Cappuccino"
 
 #Metodo 1
